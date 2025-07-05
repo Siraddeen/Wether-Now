@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+
 import dotenv from "dotenv";
 import path from "path";
 
@@ -12,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // routes
-import weatherRoutes from "./routes/weatherRoutes.js";
+import weatherRoutes from "./routes/WeatherRoutes.js";
 app.use("/api/weather", weatherRoutes);
 
 app.use(express.static(path.join(__dirname, "frontend/dist")));
