@@ -177,7 +177,9 @@ function Logic() {
     setError("");
     setWeather(null);
     try {
-      const res = await axios.get(`http://localhost:5000/api/weather/${city}`);
+      const res = await axios.get(
+        `https://siradden-wether-now1.onrender.com//api/weather/${city}`
+      );
       setWeather(res.data);
     } catch (err) {
       setError("City not found. Please enter a valid city name.");
